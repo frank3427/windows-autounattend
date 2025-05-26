@@ -4,7 +4,6 @@ set CI=%systemdrive%\ProgramData\Chocolatey\choco.exe install
 
 %CI% chocolateygui
 %CI% 7zip
-%CI% flashplayerplugin
 %CI% googlechrome
 %CI% jre8
 %CI% foxitreader
@@ -19,7 +18,6 @@ set CI=%systemdrive%\ProgramData\Chocolatey\choco.exe install
 %CI% keepass.install
 %CI% libreoffice
 %CI% atom
-%CI% notepad2
 %CI% notepadplusplus
 %CI% gimp
 %CI% owncloud-client

@@ -110,12 +110,12 @@ Windows 10 Answer File
       <component name="Microsoft-Windows-Deployment" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <RunSynchronous>
           <RunSynchronousCommand wcm:action="add">
-            <Description>Disable Login animation for Windows 10</Description>
+            <Description>Disable First Logon Animation</Description>
             <Order>1</Order>
             <Path>reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System /v EnableFirstLogonAnimation /t REG_DWORD /d 0 /f</Path>
           </RunSynchronousCommand>
           <RunSynchronousCommand wcm:action="add">
-            <Description>Disable Login animation for Windows 10</Description>
+            <Description>Disable New Network Flyout</Description>
             <Order>2</Order>
             <Path>reg add HKLM\System\CurrentControlSet\Control\Network\NewNetworkWindowOff /F</Path>
           </RunSynchronousCommand>
@@ -212,7 +212,7 @@ Windows 10 Answer File
           <SynchronousCommand wcm:action="add">
               <CommandLine>reg.exe ADD HKCU\Software\Microsoft\Windows\CurrentVersion\Search /v SearchboxTaskbarMode /t REG_DWORD /d 0</CommandLine>
               <Order>97</Order>
-              <Description>Disable Cortana</Description>
+              <Description>Set Taskbar Search to Hidden</Description>
           </SynchronousCommand>
 
           <!-- Enable UAC -->
