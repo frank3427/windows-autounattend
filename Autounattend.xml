@@ -192,20 +192,12 @@ Windows 10 Answer File
             <CommandLine>cmd /q /c "FOR %i IN (A B C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO IF EXIST %i:\disableWindowsUpdates.ps1  cmd /c powershell -file %i:\disableWindowsUpdates.ps1"</CommandLine>
           </SynchronousCommand>
 
-          <!-- Install Chocolatey -->
+          <!-- Install Applications via winget -->
           <SynchronousCommand wcm:action="add">
             <Order>50</Order>
-            <Description>Install Chocolatey</Description>
+            <Description>Install Applications via winget</Description>
             <RequiresUserInput>false</RequiresUserInput>
-            <CommandLine>cmd /q /c "FOR %i IN (A B C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO IF EXIST %i:\chocolatey.ps1  cmd /c powershell -file %i:\chocolatey.ps1"</CommandLine>
-          </SynchronousCommand>
-
-          <!-- Install Applications via Chocolatey -->
-          <SynchronousCommand wcm:action="add">
-            <Order>51</Order>
-            <Description>Install Apps via Chocolatey</Description>
-            <RequiresUserInput>false</RequiresUserInput>
-            <CommandLine>cmd /q /c "FOR %i IN (A B C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO IF EXIST %i:\chocolatey-apps.cmd  cmd /c %i:\chocolatey-apps.cmd"</CommandLine>
+            <CommandLine>cmd /q /c "FOR %i IN (A B C D E F G H I J K L N M O P Q R S T U V W X Y Z) DO IF EXIST %i:\winget-apps.ps1 cmd /c powershell -ExecutionPolicy Bypass -File %i:\winget-apps.ps1"</CommandLine>
           </SynchronousCommand>
 
           <!-- Disable Cortana Search bar -->
